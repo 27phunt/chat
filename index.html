@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>FRCS SmartPass</title>
+   <title>Chat</title>
    <style>
      body {
        font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -59,9 +59,9 @@ var title = document.getElementById('title').value
 var body = document.getElementById('body').value
 var from = document.getElementById('from').value
 
- fetch(script+"?false&1"+title)
- fetch(script+"?false&2"+body)
- fetch(script+"?true&3"+from)
+ fetch(script+"?false&1&"+title)
+ fetch(script+"?false&2&"+body)
+ fetch(script+"?true&3&"+from)
 }
    
    </script>
