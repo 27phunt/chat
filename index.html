@@ -39,20 +39,29 @@
  </head>
  <body>
 
-   <h1>Enter your room number:</h1>
+   <h1>Enter message:</h1>
 <hr>
-   <input type="text" id="room" placeholder="Room Number">
+   <input type="text" id="title" placeholder="Title">
+<hr>
+  <input type="text" id="body" placeholder="Subject">
+<hr>
+  <input type="text" id="from" placeholder="From">
 <hr><hr>
 
-<button onclick="submit()">Open</button>
+<button onclick="submit()">Send</button>
  </body>
 
  
   <script>
 function submit() {
 var script = "https://script.google.com/macros/s/AKfycbyHqprgBwNpxl5RUSN2M9eMVMgGz4E9NU6MhcqTqrXV4pMnxjqXxYcuWhjpaGUnb6QczQ/exec"
-var room = document.getElementById('room').value
-window.top.location.href = script+"?"+room
+var title = document.getElementById('title').value
+var body = document.getElementById('body').value
+var from = document.getElementById('from').value
+
+ fetch(script+"&false&1"+title)
+ fetch(script+"&false&2"+body)
+ fetch(script+"&true&3"+from)
 }
    
    </script>
