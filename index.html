@@ -54,14 +54,14 @@
  
   <script>
 function submit() {
-var script = "https://script.google.com/macros/s/AKfycbyHqprgBwNpxl5RUSN2M9eMVMgGz4E9NU6MhcqTqrXV4pMnxjqXxYcuWhjpaGUnb6QczQ/exec"
+var script = "https://script.google.com/macros/s/AKfycbyo4_vYi3PrGHha5lE69qbleVO5Ri0Q6iI8orJ4X0aEOgJkzT4YicP5CBdsMiCMNmPq/exec"
 var title = document.getElementById('title').value
 var body = document.getElementById('body').value
 var from = document.getElementById('from').value
 
- fetch(script+"&false&1"+title)
- fetch(script+"&false&2"+body)
- fetch(script+"&true&3"+from)
+ fetch(script+"?false&1"+title)
+ fetch(script+"?false&2"+body)
+ fetch(script+"?true&3"+from)
 }
    
    </script>
