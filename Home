@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Chat</title>
+   <style>
+     body {
+       font-family: 'Comic Sans MS', cursive, sans-serif;
+       text-align: center;
+       margin: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background-color: #f7f7f7;
+     }
+
+     input[type="text"] {
+       font-size: 1.2em;
+       padding: 0.5em;
+       margin-bottom: 1em;
+       text-align: center;
+     }
+
+     button {
+       font-size: 1.2em;
+       padding: 0.5em 1em;
+       cursor: pointer;
+       background-color: #5cb85c;
+       color: white;
+       border: none;
+       border-radius: 5px;
+     }
+
+
+     button:hover {
+       background-color: #4cae4c;
+     }
+   </style>
+ </head>
+ <body>
+
+   <h1>Enter message:</h1>
+<hr>
+   <input type="text" id="title" placeholder="Title">
+<hr>
+  <input type="text" id="body" placeholder="Subject">
+<hr>
+  <input type="text" id="from" placeholder="From">
+<hr><hr>
+
+<p>
+ <button onclick="submit()">Send</button>
+ <button onclick="goto('Home')">Back</button>
+ </p>
+ </body>
+
+ 
+  <script>
+function submit() {
+var script = "https://script.google.com/macros/s/AKfycbxsLBSZ8xDrau9MiwVHdSsry34sbzMY6Q7j1jsmp393gyulETgze-r9-QbwHPgZ8iib/exec"
+ 
+var title = document.getElementById('title').value
+var body = document.getElementById('body').value
+var from = document.getElementById('from').value
+
+ fetch(script+"?false&1&"+title)
+ fetch(script+"?false&2&"+body)
+ fetch(script+"?true&3&"+from)
+}
+function goto(page) {
+
+ window.top.location.href = "https://27phunt.github.io/chat/"+page
+}
+   </script>
+ </body>
+</html>
